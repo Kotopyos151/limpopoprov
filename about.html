@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лимпопо - О нас</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><a href="index.html"><img src="images/logo.png" alt="Лимпопо"></a></li>
+                <li>
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О нас</a>
+                    <a href="schedule.html">График</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="location.html">Местоположение</a>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+            <h3>Номер телефона<br>
+                <a href="tel:89833688498" class="phone-link">
+                    <i class="fas fa-phone-alt"></i> 8-983-368-84-98
+                </a>
+            </h3>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <h1>О нашем центре</h1>
+        </section>
+        
+        <section class="about-content">
+            <div class="about-section">
+                <h2>Наша цель</h2>
+                <p>Создать уютное пространство для семейного отдыха, обучения и общения, где каждый член семьи может быть счастливым.</p>
+            </div>
+            
+            <div class="about-section">
+                <h2>Наши ценности</h2>
+                <ul>
+                    <li>Безопасность для всех: детей, родителей и наших сотрудников</li>
+                    <li>Превосходный сервис</li>
+                    <li>Счастливый гость</li>
+                    <li>Здоровый образ жизни</li>
+                </ul>
+            </div>
+
+            <!-- Форма для отзывов -->
+            <div class="about-section">
+                <h2>Оставить отзыв</h2>
+                <div class="review-form" id="reviewForm">
+                    <form id="reviewFormElement">
+                        <div class="form-group">
+                            <label for="reviewName">Ваше имя:</label>
+                            <input type="text" id="reviewName" placeholder="Введите ваше имя" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Ваша оценка:</label>
+                            <div class="rating-stars" id="ratingStars">
+                                <span data-value="1">★</span>
+                                <span data-value="2">★</span>
+                                <span data-value="3">★</span>
+                                <span data-value="4">★</span>
+                                <span data-value="5">★</span>
+                            </div>
+                            <input type="hidden" id="reviewRating" value="5">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reviewText">Ваш отзыв:</label>
+                            <textarea id="reviewText" rows="3" placeholder="Расскажите о вашем опыте посещения" required></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Детский игровой центр "Лимпопо"</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/limpopo_kzl?igsh=N29reXNmdms3eWRn" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Всплывающие отзывы (открыты по умолчанию) -->
+    <div class="floating-reviews" id="floatingReviews">
+        <div class="floating-panel show" id="floatingPanel">
+            <div class="floating-header">
+                <h3><i class="fas fa-star"></i> Отзывы наших посетителей</h3>
+                <button class="close-floating" id="closeFloating"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="floating-reviews-list" id="floatingReviewsList">
+                <!-- Отзывы будут загружаться сюда -->
+            </div>
+            <div class="floating-footer">
+                <button class="btn-review" id="floatingReviewBtn">Написать отзыв</button>
+            </div>
+        </div>
+        <button class="floating-toggle" id="floatingToggle">
+            <i class="fas fa-comment"></i>
+            <span class="reviews-count" id="reviewsCount">0</span>
+        </button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
